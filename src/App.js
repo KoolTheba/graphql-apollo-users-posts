@@ -11,6 +11,7 @@ import Navbar from './components/Navbar'
 import UsersList from './components/UsersList'
 import UserDetail from './components/UserDetail'
 import PostComments from './components/PostComments'
+import ChangeUserDetails from './components/ChangeUserDetails'
 import './App.css'
 
 function App() {
@@ -26,6 +27,9 @@ function App() {
               </Route>
               <Route exact path="/user/:id">
                 <UserDetail />
+              </Route>
+              <Route exact path="/user/:id/edit">
+                <ChangeUserDetails />
               </Route>
               <Route exact path="/user/:id/post/:postId/comments">
                 <PostComments />
