@@ -14,7 +14,14 @@ const UserDetail = () => {
 
     const postsDetails = () => {
         if(userPostsLoading) return <p>Loading posts...</p>
-        if(userPosts?.getPosts?.length === 0) return <p>No Posts found!</p>
+        if(userPosts?.getPosts?.length === 0) {
+            return (
+                <>
+                <p>No Posts found!</p>
+                <Link to={'/'}>Back</Link>
+                </>
+            )
+        }
 
         return  userPosts?.getPosts?.map(post => (
                     <div key={post.id}>
@@ -39,12 +46,16 @@ const UserDetail = () => {
         <>
         <h1>User id {id} Detail</h1>
         <p>Username: {data.getUser.username}</p>
+        <button>
+            <Link to={`/user/${id}/edit`}>Edit Username</Link>
+        </button>
         <p>Email: {data.getUser.email}</p>
         <button
             className='check-posts-button'
             onClick={onGetPosts}
             style={{cursor: 'pointer', backgroundColor: 'olivedrab'}}
-        >Check posts</button>
+        >Check posts
+        </button>
         {postsDetails()}
         </>
     )
