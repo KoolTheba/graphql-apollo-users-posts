@@ -4,7 +4,9 @@ import { useQuery } from '@apollo/client'
 import { GET_POST_COMMENTS } from '../queries'
 
 const PostComments = () => {
+
     let { id, postId } = useParams()
+
     const {loading, error, data} = useQuery(
         GET_POST_COMMENTS, 
         {variables: {postId}}
@@ -20,12 +22,16 @@ const PostComments = () => {
             )
         }
 
-        return data?.getComments?.map(e => (
-            <div className='comments-list' key={e.id}>
-                <p className='comment-content'>{e.content}</p>
-                <span role='img' aria-label='image'>💜 {e.likes}</span>
-            </div>
-        ))
+        return (
+            <>
+            {data?.getComments?.map(e => (
+                <div className='comments-list' key={e.id}>
+                    <p className='comment-content'>{e.content}</p>
+                    <span role='img' aria-label='image'>💜 {e.likes}</span>
+                </div>
+            ))}
+            </>
+        )
     }
 
     if(loading) return <p>Loading comments...</p>
@@ -41,5 +47,3 @@ const PostComments = () => {
 }
 
 export default PostComments
-
-// tests: postId: 29, postId: 73
