@@ -1,31 +1,54 @@
-# graphql-apollo-users-posts
- ⚛️ Mini app made with React, GraphQL and Apollo for reading random users' posts 📚 
+# Graphql + Apollo Users' posts app
+ ⚛️ Mini app made with React, Router, GraphQL and Apollo for reading random users' posts 📚 
 
-# Getting Started with Create React App
+ This project has the intention of practicing with GraphQL and Apollo.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+ If you'd like to start it from scratch, check the instructions at [this repo](https://github.com/zamarrowski/Curso-React-Redux) in the section `7.React con GraphQL`
 
-## Available Scripts
+## Dependencies
+- GraphQL
+- Apollo client
+- React Router
+- Apollo server
+- Express
 
-In the project directory, you can run:
+## Up and running 🚀
 
-### `npm start`
+What can you do from here? 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. You can check the project around just reading the code
+2. You can try yourself to develop it in your own ways and practice React and GraphQL
+3. You can do some PR's or open issues with new features, and we can develop them together
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+I'm sure you already know them, but, here are the steps:
 
-### `npm test`
+#### 1. Clone the project
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+`https://github.com/KoolTheba/graphql-apollo-users-posts.git`
 
-### `npm run build`
+#### 2. Install dependencies
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+You should install the dependencies for the server and the client.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+For the **server**:
+
+- Go to the `server` directory
+
+For the **client**:
+
+- Go to the `root`
+
+For both:
+
+- Install dependencies: `npm install`
+- Up and running! `npm run start`
+
+
+## What's next
+- Testing
+- Improve styling
+
+> 😎 Tasks for you: clone the project and practice your testing skills and styling skills with any library you prefer (Jest, Enzyme, Testing-Library, Style-components 💅 ...)
+
+## Thanks to
+@zamarrowski for the course and the server 🦄
